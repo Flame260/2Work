@@ -5,7 +5,7 @@ using UnityEngine;
 public class movement : MonoBehaviour
 {
     Rigidbody rb;
-    public float speed=2f;
+    public float speed=10f;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,13 +19,15 @@ public class movement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rb.velocity = GetMovement()* speed  
+        Vector3 aimDir = transform.TransformDirection(GetMovement());
+        rb.AddForce(aimDir * speed);
     }
     Vector3 GetMovement()
     {
         float xmove = Input.GetAxis("Horizontal");
-        float ymove = Input.GetAxis("Vertical");
-        Vector3 move = new Vector3(xmove, 0, ymove);
+        float zmove = Input.GetAxis("Vertical");
+        Vector3 move = new Vector3(xmove, 0, zmove);
+       
         Debug.DrawRay(transform.position,rb.velocity,Color.blue);
         Debug.DrawRay(transform.position,move*2,Color.red);
         return move; 
