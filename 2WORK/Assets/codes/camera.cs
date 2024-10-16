@@ -7,7 +7,7 @@ public class camera : MonoBehaviour
     Vector3 mylook;
     public Camera mycam;
     public float camlock = 90f;
-    float lookspeed = 100f;
+    float lookspeed = 200f;
     float onstarttimer;
     // Start is called before the first frame update
     private void Awake()
