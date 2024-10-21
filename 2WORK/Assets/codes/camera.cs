@@ -29,7 +29,7 @@ public class camera : MonoBehaviour
         mylook.y = Mathf.Clamp(mylook.y, -camlock, camlock);
         transform.rotation = Quaternion.Euler(0f, mylook.x, 0f);
 
-        mycam.transform.rotation = Quaternion.Euler(mylook.y, mylook.x, 0f);
+        mycam.transform.rotation = Quaternion.Euler(-mylook.y, mylook.x, 0f);
     }
     Vector3 Deltalook()
     {
