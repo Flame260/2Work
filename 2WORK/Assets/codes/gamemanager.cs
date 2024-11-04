@@ -25,7 +25,7 @@ public class gamemanager : MonoBehaviour
         gametimer.text = "Time:" + Mathf.Round(Timer).ToString();
         myscore.text = "score: " + collectScore.ToString();
     }
-    public void addscore()
+    public void AddScore()
     {
         collectScore++;
     }

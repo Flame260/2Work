@@ -24,7 +24,7 @@ public class changescene : MonoBehaviour
             SceneManager.LoadScene(scenename);
         }
     }
-    void update()
+    void Update()
     {
         if (_gamemanager.collectScore >= 20)
         {

@@ -27,14 +27,12 @@ public class movement : MonoBehaviour
             rb.AddForce(Vector3.up * jumpforce, ForceMode.Impulse);
             isGrounded = false;
         }
-    }
-    private void FixedUpdate()
-    {
         Vector3 aimDir = transform.TransformDirection(GetMovement());
+        print(aimDir);
         rb.AddForce(aimDir * speed);
-
     }
-
+    
+    
 
     Vector3 GetMovement()
     {

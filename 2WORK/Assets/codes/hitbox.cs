@@ -4,28 +4,21 @@ using UnityEngine;
 
 public class hitbox : MonoBehaviour
 {
-    public Gamemanager gamemanager;
+    public gamemanager _gamemanager;
     void start()
     {
-        gamemanager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<gamemanager>();
+        _gamemanager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<gamemanager>();
     }
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag=="Enemy")
         {
+            _gamemanager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<gamemanager>();
             Destroy(other.gameObject);
-            gamemanager.AddScore();
+            _gamemanager.AddScore();
             
         }
     }
-    void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.tag=="Enemy")
-        {
-            Destroy(other.gameObject);
-            gamemanager.AddScore();
-            
-        }
-    }
+    
     
 }
