@@ -1912,6 +1912,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 644069971407793788, guid: 1883fce1b01e21542aee2c2b690e8da9, type: 3}
+      propertyPath: speed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 644069971407793791, guid: 1883fce1b01e21542aee2c2b690e8da9, type: 3}
       propertyPath: m_Name
       value: PLAYER
@@ -2223,6 +2227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenename: game
+  _gamemanager: {fileID: 0}
 --- !u!1 &1788744607
 GameObject:
   m_ObjectHideFlags: 0
